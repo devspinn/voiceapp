@@ -11,6 +11,7 @@ export default defineConfig({
     },
   },
   server: {
+    allowedHosts: ["localhost", "d-townsend-4mqf.tailfa0380.ts.net"],
     proxy: {
       "/trpc": {
         target: "http://localhost:3002",

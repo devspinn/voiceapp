@@ -10,9 +10,9 @@
     "./schema": "./src/schema.ts"
   },
   "scripts": {
-    "db:push": "drizzle-kit push",
-    "generate": "drizzle-kit generate",
-    "migrate": "drizzle-kit migrate"
+    "db:push": "dotenv -e ../../.env -- drizzle-kit push",
+    "generate": "dotenv -e ../../.env -- drizzle-kit generate",
+    "migrate": "dotenv -e ../../.env -- drizzle-kit migrate"
   },
   "dependencies": {
     "drizzle-orm": "^0.38.0",

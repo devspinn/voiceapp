@@ -10,7 +10,11 @@ export function createAuth(db: Database) {
     },
     secret: process.env.BETTER_AUTH_SECRET,
     baseURL: process.env.BETTER_AUTH_URL,
-    trustedOrigins: [process.env.BETTER_AUTH_URL ?? "http://localhost:3002", "http://localhost:5173"],
+    trustedOrigins: [
+      process.env.BETTER_AUTH_URL ?? "http://localhost:3002",
+      "http://localhost:5173",
+      ...(process.env.TRUSTED_ORIGINS?.split(",") ?? []),
+    ],
   });
 }
 

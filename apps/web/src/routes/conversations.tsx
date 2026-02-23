@@ -25,7 +25,7 @@ function ConversationsLayout() {
 
   if (isPending) {
     return (
-      <div className="flex h-screen items-center justify-center">
+      <div className="flex h-dvh items-center justify-center">
         <div className="text-gray-500">Loading...</div>
       </div>
     );
@@ -37,7 +37,7 @@ function ConversationsLayout() {
   }
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-dvh">
       {/* Mobile overlay */}
       {sidebarOpen && (
         <div
